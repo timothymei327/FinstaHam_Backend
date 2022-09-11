@@ -19,3 +19,10 @@ class Post(models.Model):
 
     def __str__(self):
         return self.caption
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+    body = models.TextField(blank=False)
+
+    def __str__(self):
+        return self.body
