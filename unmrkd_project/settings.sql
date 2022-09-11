@@ -1,0 +1,3 @@
+CREATE DATABASE unmrkd;
+CREATE USER unmrkduser WITH PASSWORD 'unmrkd';
+GRANT ALL PRIVILEGES ON DATABASE unmrkd TO unmrkduser;
