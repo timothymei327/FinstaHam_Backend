@@ -17,7 +17,8 @@ class Post(models.Model):
         Forum, on_delete=models.CASCADE, related_name='posts')
     photo_urls = ArrayField(models.CharField(max_length=200), size=10)
     caption = models.TextField(blank=False)
-    hashtags = ArrayField(models.CharField(max_length=200), size=10)
+    hashtags = ArrayField(models.CharField(
+        max_length=200), size=10, blank=True)
 
     def __str__(self):
         return self.caption
