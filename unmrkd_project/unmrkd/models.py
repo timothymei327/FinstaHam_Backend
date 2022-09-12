@@ -6,13 +6,15 @@ from django.contrib.postgres.fields import ArrayField
 class Forum(models.Model):
     name = models.CharField(max_length=30)
     description = models.TextField()
-    photo_url = models.TextField()
+    photo_url = models.TextField(blank=True)
 
     def __str__(self):
         return self.name
 
+
 class Post(models.Model):
-    forum = models.ForeignKey(Forum, on_delete=models.CASCADE, related_name='posts')
+    forum = models.ForeignKey(
+        Forum, on_delete=models.CASCADE, related_name='posts')
     photo_urls = ArrayField(models.CharField(max_length=200), size=10)
     caption = models.TextField(blank=False)
     hashtags = ArrayField(models.CharField(max_length=200), size=10)
@@ -20,8 +22,10 @@ class Post(models.Model):
     def __str__(self):
         return self.caption
 
+
 class Comment(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name='comments')
     body = models.TextField(blank=False)
 
     def __str__(self):
