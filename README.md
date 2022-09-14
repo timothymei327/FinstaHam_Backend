@@ -11,7 +11,10 @@
 
 ### _Description_
 
-This website is a public forum where users are able to anonymously create forums and post within them, as well as comment on existing posts as well. 
+This website is a public forum where users are able to anonymously create forums and post within them, as well as comment on existing posts as well.
+
+- Deployed site: [unmrkd_Frontend](https://unmrkd.herokuapp.com/)
+- Deployed site: [unmrkd_Backend](https://unmrkd-backend.herokuapp.com/)
 
 ### _Technologies Used_
 
@@ -24,9 +27,7 @@ This website is a public forum where users are able to anonymously create forums
 
 ### _Screenshots_
 
-![Landing_Page](https://i.imgur.com/YBszQQF.png)
-![Forum_List](https://i.imgur.com/jFYwevj.jpg)
-![Forum_Details](https://i.imgur.com/7IdfiHf.jpg)
+![Deployed_Django_REST_API](https://i.imgur.com/UpQuvBM.png)
 
 ### _Getting Started_
 
